@@ -188,8 +188,8 @@ class RestCallRequest
         
         protected function setCurlOpts (&$curlHandle)
         {                
-                curl_setopt($curlHandle, CURLOPT_SSL_VERIFYPEER, FALSE);
-        curl_setopt($curlHandle, CURLOPT_SSL_VERIFYHOST, FALSE);
+                curl_setopt($curlHandle, CURLOPT_SSL_VERIFYPEER, TRUE);
+				curl_setopt($curlHandle, CURLOPT_SSL_VERIFYHOST, TRUE);
                 curl_setopt($curlHandle, CURLOPT_TIMEOUT, 105200);
                 curl_setopt($curlHandle, CURLOPT_URL, $this->url);
                 curl_setopt($curlHandle, CURLOPT_RETURNTRANSFER, true);
